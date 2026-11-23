@@ -1,0 +1,30 @@
+.animal-card {
+  position: relative; display: flex; height: 100%;
+  background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+.animal-card:hover { transform: translateY(-4px); border-color: var(--border2); }
+.animal-card-main {
+  display: flex; flex-direction: column; width: 100%; padding: 0; border: 0; background: none;
+  text-align: left; color: inherit;
+}
+.animal-card-media { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--card2); }
+.animal-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.animal-card:hover .animal-card-media img { transform: scale(1.07); }
+.animal-card-empty { position: absolute; inset: 0; display: grid; place-items: center; color: var(--accent); opacity: 0.4; }
+.animal-card-shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(6, 10, 8, 0.7)); pointer-events: none; }
+.animal-card-tag {
+  position: absolute; top: 12px; left: 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 5px 10px; border-radius: 8px; color: #e8fdf0; background: rgba(6, 10, 8, 0.62); backdrop-filter: blur(8px);
+}
+.animal-card-body { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px 16px; flex: 1; }
+.animal-card-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--text); text-transform: capitalize; line-height: 1.25; }
+.animal-card-sci { font-size: 12px; font-style: italic; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.animal-card-cta { margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.animal-card-chat {
+  position: absolute; right: 12px; bottom: 12px; width: 38px; height: 38px; border-radius: 12px; border: 0;
+  display: grid; place-items: center; background: linear-gradient(135deg, var(--accent2), var(--accent)); color: var(--accent-ink);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25); transition: transform 0.2s ease;
+}
+.animal-card-chat:hover { transform: scale(1.08); }
