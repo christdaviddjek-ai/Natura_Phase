@@ -25,6 +25,11 @@ Si la page devient noire quand vous cliquez sur une carte après déploiement su
 - **Environnements**: Cochez `Production`, `Preview`, `Development`
 - **Enregistrez**: Cliquez sur le bouton Save
 
+#### `GROQ_MODEL` (modèle utilisé par Elon)
+
+- **Valeur**: `openai/gpt-oss-120b`
+- Cette variable est facultative : le projet utilise cette valeur par défaut si elle n'est pas définie.
+
 ---
 
 ## 🔑 Où trouver vos clés API?

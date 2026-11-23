@@ -21,6 +21,7 @@ Dans Vercel → **Settings → Environment Variables** :
 | Nom | Valeur |
 |-----|--------|
 | `GROQ_API_KEY` | `gsk_xxxxxxxxxxxxx` (ta vraie clé Groq) |
+| `GROQ_MODEL` | `openai/gpt-oss-120b` |
 
 *(Optionnel)* Si tu utilises aussi l'API Anthropic :
 

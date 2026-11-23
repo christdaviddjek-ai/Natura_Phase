@@ -12,9 +12,8 @@ Quand tu présentes un animal pour la première fois, tu couvres TOUJOURS ces po
 Présentation : 6 à 8 phrases, concrètes et chiffrées quand possible, ton vivant, jamais scolaire. Tu n'inventes rien : si tu n'es pas sûr d'un chiffre, tu le dis.
 Chat de suivi : 2 à 4 phrases, précises et directes.`
 
-// Modèle configurable via GROQ_MODEL. Par défaut un modèle non "raisonnant" : les modèles
-// de raisonnement consomment leurs tokens en réflexion et renvoient parfois une réponse vide.
-const MODEL = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile'
+// Modèle configurable via GROQ_MODEL.
+const MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-120b'
 const REASONING = /^(openai\/gpt-oss|qwen\/)/.test(MODEL)
 
 const clean = (s, max) => String(s ?? '').replace(/[\u0000-\u001f]/g, ' ').slice(0, max)
